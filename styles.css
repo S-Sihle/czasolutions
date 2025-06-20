@@ -1,0 +1,733 @@
+/*==========================================================================================================================*/
+/* Top Bar Styles */
+/* Top Bar Styles */
+.top-bar {
+    background-color: #2f3742;  /* Same as your primary color */
+    color: #ffffff;
+    padding: 10px 0;            /* Padding to add space around the content */
+    text-align: right;         /* Center the text */
+    font-size: 14px;            /* Adjust font size */
+    z-index: 1001;              /* Ensure it appears above the content */
+    position: fixed;         /* Relative positioning to appear above the header */
+    width: 100%;                /* Make sure the top bar covers the full width */
+}
+
+/* Styling the contact info inside the top bar */
+.top-bar .contact-info {
+    display: inline-block;      /* Keep the contact info in one line */
+}
+
+.top-bar .contact-info span {
+    margin-right: 20px;         /* Add space between phone and email */
+}
+
+/* Adjusting the header to not overlap */
+header {
+    margin-top: 10px;           /* Add a small margin so it doesn't touch the top bar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2f3742;
+    color: #ffffff;
+    position: relative;
+    z-index: 1000;
+    top: 0;
+}
+
+
+
+/*==========================================================================================================================*/
+/* Default Header Style */
+#main-header {
+    position: fixed;
+    top: 25px;
+    width: 100%;
+    height: 145px;
+    background-color: #06998f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0px;
+    transition: height 0.3s ease, padding 0.3s ease;
+    z-index: 1000;
+    margin-top: 10px;
+}
+
+#main-header img {
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+#main-header.shrink {
+    height: 75px;
+    padding: 0 20px;
+}
+
+#main-header.shrink img {
+    width: 75px;
+    height: 80px;
+}
+
+nav ul {
+    display: flex;
+    gap: 50px;
+    margin-left: 50px;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 50px;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav ul li a.active {
+    color: #ffffff;
+    text-decoration: underline; /* Underline active link */
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+
+/*==========================================================================================================================*/
+/*Home Page*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #2f3742;
+}
+
+.hero {
+    background: url('images/hero-image.png') no-repeat center center/cover;
+    height: 600px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-top: 150px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* This dims the image */
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1; /* Ensures the text is above the dimming overlay */
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.welcome-note {
+    padding: 40px;
+    background-color: #f1f1f1; /* Light background to distinguish the section */
+    color: #2f3742;
+}
+
+.welcome-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.welcome-text {
+    flex: 1; /* Text takes up more space */
+    padding-right: 20px; /* Adds space between text and image */
+}
+
+.welcome-text h2 {
+    color: #06998f;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.welcome-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.welcome-text h3 {
+    color: #2f3742;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.welcome-image {
+    flex: 0.5; /* Image takes up less space */
+    text-align: center;
+}
+
+.welcome-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: Adds rounded corners to the image */
+}
+
+
+
+.reasons {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.reasons h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #2f3742;
+}
+
+.reason-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.reason {
+    max-width: 200px;
+    margin: 0 10px;
+    padding: 20px;
+    background-color: #06998f;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reason img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.reason p {
+    font-size: 18px;
+    color: #2f3742;
+}
+
+.featured-products {
+    padding: 50px 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.featured-products h2 {
+    font-size: 36px;
+    color: #2f3742;
+    margin-bottom: 30px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center; /* Centers the items */
+    flex-wrap: wrap; /* Items will wrap on smaller screens */
+    gap: 20px; /* Adds space between products */
+    max-width: 1200px; /* Limits the overall width */
+    margin: 0 auto; /* Centers the container */
+}
+
+.product {
+    flex: 1 1 calc(25% - 40px); /* Each product takes up about 25% of the container */
+    max-width: 220px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.product h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #2f3742;
+}
+
+.product p {
+    font-size: 16px;
+    color: #2f3742;
+}
+
+.call-to-action {
+    padding: 80px 0;
+    background-color: #06998f;
+    color: #ffffff;
+    text-align: center;
+}
+
+.call-to-action h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.call-to-action p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    background-color: #ffffff;
+    color: #06998f;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: #f5f5f5;
+    color: #057f74;
+}
+
+
+
+
+/*==========================================================================================================================*/
+/* About Us Section */
+
+.heroAbout {
+    position: relative;
+    height: 33vh; /* 1/3 of the viewport height */
+    overflow: hidden;
+    padding-top: 140px;
+}
+
+.heroAbout::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* This dims the image */
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-textAbout {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: 1; /* Ensures the text is above the dimming overlay */
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 18px;
+}
+
+.about-us {
+    padding: 0px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.about-us h1 {
+    font-size: 48px;
+    color: #06998f;
+    margin-bottom: 50px;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.about-text {
+    max-width: 600px;
+    text-align: left;
+}
+
+.about-text h2, .about-image h2 {
+    font-size: 28px;
+    color: #06998f;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.about-text p, .about-image p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 0px;
+    color: #2f3742;
+}
+
+.about-text ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-text ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.about-image {
+    max-width: 500px;
+    margin-top: 30px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.partners {
+    text-align: center;
+    margin: 50px 0;
+    padding: 20px;
+    background-color: #f9f9f9; /* Optional: A soft background color to distinguish the section */
+}
+
+.partners h2 {
+    color: #06998f;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.partner-logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo-border {
+    border: 2px solid #06998f; /* Border color */
+    padding: 10px; /* Space between border and logo */
+    border-radius: 8px; /* Rounded corners for a softer look, optional */
+    background-color: #ffffff; /* Background color of the border */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 150px; /* Set the same width for all logos */
+    height: 80px; /* Set the same height for all logos */
+    overflow: hidden; /* Ensure logos don’t overflow */
+}
+
+.logo-border img {
+    max-width: 100%; /* Make the image fit within the container width */
+    max-height: 100%; /* Ensure the image fits within the container height */
+    display: block;
+}
+
+.partner-logos img:hover {
+    transform: scale(1.1); /* Slightly enlarge logos on hover */
+}
+
+
+/*==========================================================================================================================*/
+/* Contact Section */
+
+.heroContact {
+    position: relative;
+    height: 33vh; /* 1/3 of the viewport height */
+    overflow: hidden;
+    padding-top: 140px;
+}
+
+.heroContact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* This dims the image */
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-textContact {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: 1; /* Ensures the text is above the dimming overlay */
+}
+
+/* Contact Section */
+.contact {
+    padding: 20px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.contact h1 {
+    font-size: 48px;
+    color: #06998f;
+    margin-bottom: 50px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.contact-details {
+    width: 35%;
+    background-color: #ada8a8;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-icon {
+    width: 24px;
+    margin-right: 10px;
+}
+
+.social-media-bar {
+    margin-top: 20px;
+}
+
+.social-media-bar a {
+    margin-right: 10px;
+}
+
+.contact-form {
+    width: 65%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #06998f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #045c62;
+}
+
+.social-media a {
+    display: inline-block;
+    margin: 0 15px;
+    color: #06998f;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #047c6d;
+}
+
+.faq p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.chat {
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.chat p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Social Media Bar */
+.social-media-bar {
+    margin-top: 30px;
+}
+
+.social-media-bar h3 {
+    font-size: 20px;
+    color: #06998f;
+    margin-bottom: 5px;
+}
+
+.social-media-bar a {
+    margin: 0 10px;
+}
+
+.social-media-bar img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.social-media-bar img:hover {
+    transform: scale(1.2); /* Hover effect */
+}
+
+
+
+
+/*==========================================================================================================================*/
+/* Footer Styles */
+footer {
+    background-color: #2f3742;
+    color: #ffffff;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo, .footer-links, .footer-contact {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-logo img {
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #06998f;
+}
+
+.footer-contact p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer-contact img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.social-media {
+    display: flex;
+    margin-top: 20px;
+}
+
+.social-media a {
+    margin-right: 15px;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-media img:hover {
+    transform: scale(1.2);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #1c2028;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+}
